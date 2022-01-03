@@ -1,0 +1,2 @@
+class Appform < ApplicationRecord
+end

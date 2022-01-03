@@ -1,0 +1,2 @@
+class Jobcourse < ApplicationRecord
+end

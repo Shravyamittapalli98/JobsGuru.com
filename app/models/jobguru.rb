@@ -1,0 +1,2 @@
+class Jobguru < ApplicationRecord
+end

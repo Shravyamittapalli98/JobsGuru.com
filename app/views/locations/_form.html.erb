@@ -1,0 +1,47 @@
+<%= form_with(model: location) do |form| %>
+  <% if location.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(location.errors.count, "error") %> prohibited this location from being saved:</h2>
+
+      <ul>
+        <% location.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :designation %>
+    <%= form.text_field :designation %>
+  </div>
+
+  <div class="field">
+    <%= form.label :company %>
+    <%= form.text_field :company %>
+  </div>
+
+  <div class="field">
+    <%= form.label :location %>
+    <%= form.text_field :location %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qualification %>
+    <%= form.text_field :qualification %>
+  </div>
+
+  <div class="field">
+    <%= form.label :salary %>
+    <%= form.text_field :salary %>
+  </div>
+
+  <div class="field">
+    <%= form.label :experience %>
+    <%= form.text_field :experience %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

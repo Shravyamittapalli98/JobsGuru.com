@@ -1,0 +1,542 @@
+<<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>jobrole</title>
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: cursive;
+}
+body{
+    margin:0; 
+    margin-right: 40px;
+}   
+nav{
+  width: 100%;
+  height: 75px;
+  background-color:black;
+  line-height: 75px;
+  padding:0px 100px;
+  position:fixed;
+  z-index: 1;
+}
+nav .logo{
+  font-size: 100px;
+  font-weight: bold;
+  letter-spacing: 1.5px; 
+}
+nav .logo p{
+  float:left;
+  color:beige;
+  text-transform: uppercase;
+}
+nav ul{
+  float: right;
+}
+nav ul li{
+  list-style: none;
+}
+nav ul li a{
+  color:#fff;
+  text-decoration: none;
+  font-size: 13px;
+  text-transform: uppercase;
+  padding:0px 32px;
+}
+nav ul li a:hover{
+  color:#c0d96f;
+}
+nav ul li .active{
+  color:#c0d96f;
+}
+.container{
+  margin-top: 100px;
+}
+table ,td,th{
+  border: 2px solid black;
+}
+table{
+  border-collapse: collapse;
+  width: 100%;
+  margin-left: 50px;
+  margin-right: 100px;
+  margin-top: 90px;
+
+}
+th, td{
+  text-align: left;
+}
+#bg{
+    background-image: url('/bg.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+h1{
+  text-align: center;
+}
+h2{
+  margin-left: 40px;
+}
+</style>
+<body id="bg">
+  <nav>
+      <div class="logo">
+         <p>JobsGuru.Com</p>
+      </div>
+      <ul>
+         <li><a href="../sessions/welcome" class="active">home</a></li>
+         <li><a href="../home/about">about us</a></li>
+         <li><a href="../home/reviews">reviews</a></li>
+         <li><a href="../home/contact">contact us</a></li>
+         <li><a href="/">logout</a></li>
+      </ul>
+   </nav>
+
+
+<div class="container">
+
+<h1>JOBS  BY  ROLE</h1>
+<br><br>
+<h2> Accountant</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Designation</th>
+      <th>Company</th>
+      <th>Location</th>
+      <th>Qualification</th>
+      <th>Salary</th>
+      <th>Experience</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @roles.each do |role| %>
+    <% name= role.designation %>
+        <% if name == 'Accountant' or name == 'Accountants Executive' or name == 'Junior Accountant'  or name == 'Assistant Account Officer' %>
+      <tr>
+        <td><%= role.designation %></td>
+        <td><%= role.company %></td>
+        <td><%= role.location %></td>
+        <td><%= role.qualification %></td>
+        <td><%= role.salary %></td>
+        <td><%= role.experience %></td>
+        <td><%= link_to 'Show', role %></td>
+        <td><a href="../apps/new">Apply</td>
+       </tr>
+    
+    <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
+
+<h2>IT Software-Engineer</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Designation</th>
+      <th>Company</th>
+      <th>Location</th>
+      <th>Qualification</th>
+      <th>Salary</th>
+      <th>Experience</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @roles.each do |role| %>
+    <% name= role.designation %>
+     <% if name == 'Software Tester' or name == 'IT Software Engineer' or name == 'JAVA Developer' or name =='Software Engineer' or name == 'Web Developer' or name == 'PHP Developer'%>
+      <tr>
+      <tr>
+        <td><%= role.designation %></td>
+        <td><%= role.company %></td>
+        <td><%= role.location %></td>
+        <td><%= role.qualification %></td>
+        <td><%= role.salary %></td>
+        <td><%= role.experience %></td>
+        <td><%= link_to 'Show', role %></td>
+        <td><a href="../apps/new">Apply</td>
+ 
+        </tr>
+
+    <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
+<h2> Sales/Marketing Executive</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Designation</th>
+      <th>Company</th>
+      <th>Location</th>
+      <th>Qualification</th>
+      <th>Salary</th>
+      <th>Experience</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @roles.each do |role| %>
+    <% name= role.designation %>
+    <% if name == 'Bussiness Development Associate' or name == 'Sales Executive' or name == 'Field Marketing Executive' or name == 'Sales Manager'  or name =='Bussiness Development Manager' %>
+      <tr>
+        <td><%= role.designation %></td>
+        <td><%= role.company %></td>
+        <td><%= role.location %></td>
+        <td><%= role.qualification %></td>
+        <td><%= role.salary %></td>
+        <td><%= role.experience %></td>
+        <td><%= link_to 'Show', role %></td>
+        <td><a href="../apps/new">Apply</td>
+ 
+       </tr>
+    
+    <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<h2> BPO/Tellecaller</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Designation</th>
+      <th>Company</th>
+      <th>Location</th>
+      <th>Qualification</th>
+      <th>Salary</th>
+      <th>Experience</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @roles.each do |role| %>
+    <% name= role.designation %>
+    <% if name =='BPO' or name == 'Tellecaller' or name == 'Inbound process'%>
+      <tr>
+        <td><%= role.designation %></td>
+        <td><%= role.company %></td>
+        <td><%= role.location %></td>
+        <td><%= role.qualification %></td>
+        <td><%= role.salary %></td>
+        <td><%= role.experience %></td>
+        <td><%= link_to 'Show', role %></td>
+      <td><a href="../apps/new">Apply</td>
+ 
+</tr>
+    
+    <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<h1>JOBS BY LOCATION</h1>
+<h2>Karimnagar</h2> 
+<table>
+  <thead>
+    <tr>
+      <th>Designation</th>
+      <th>Company</th>
+      <th>Location</th>
+      <th>Qualification</th>
+      <th>Salary</th>
+      <th>Experience</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @roles.each do |role| %>
+
+      
+    <% name= role.location%>
+    <% if name =='Karimnagar' %>
+      <tr>
+        <td><%= role.designation %></td>
+        <td><%= role.company %></td>
+        <td><%= role.location %></td>
+        <td><%= role.qualification %></td>
+        <td><%= role.salary %></td>
+        <td><%= role.experience %></td>
+        <td><%= link_to 'Show', role %></td>
+        <td><a href="../apps/new">Apply</td>
+ 
+        </tr>
+
+    <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<h2>Hyderabad</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Designation</th>
+      <th>Company</th>
+      <th>Location</th>
+      <th>Qualification</th>
+      <th>Salary</th>
+      <th>Experience</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @roles.each do |role| %>
+
+      
+    <% name= role.location%>
+    <% if name =='Hyderabad' %>
+      <tr>
+        <td><%= role.designation %></td>
+        <td><%= role.company %></td>
+        <td><%= role.location %></td>
+        <td><%= role.qualification %></td>
+        <td><%= role.salary %></td>
+        <td><%= role.experience %></td>
+        <td><%= link_to 'Show', role %></td>
+        <td><a href="../apps/new">Apply</td>
+ 
+        </tr>
+
+    <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<h2>Vizag</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Designation</th>
+      <th>Company</th>
+      <th>Location</th>
+      <th>Qualification</th>
+      <th>Salary</th>
+      <th>Experience</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @roles.each do |role| %>
+
+      
+    <% name= role.location%>
+    <% if name == 'Vizag' %>
+      <tr>
+        <td><%= role.designation %></td>
+        <td><%= role.company %></td>
+        <td><%= role.location %></td>
+        <td><%= role.qualification %></td>
+        <td><%= role.salary %></td>
+        <td><%= role.experience %></td>
+        <td><%= link_to 'Show', role %></td>
+        <td><a href="../apps/new">Apply</td>
+ 
+        </tr>
+
+    <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
+<h1> JOBS BY COURSES</h1>
+<h2>  B.Tech/B.E </h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Designation</th>
+      <th>Company</th>
+      <th>Location</th>
+      <th>Qualification</th>
+      <th>Salary</th>
+      <th>Experience</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @roles.each do |role| %>
+
+      
+    <% name= role.qualification%>
+    <% if name == 'B.Tech/B.E'or name == 'B.Tech' %>
+      <tr>
+        <td><%= role.designation %></td>
+        <td><%= role.company %></td>
+        <td><%= role.location %></td>
+        <td><%= role.qualification %></td>
+        <td><%= role.salary %></td>
+        <td><%= role.experience %></td>
+        <td><%= link_to 'Show', role %></td>
+        <td><a href="../apps/new">Apply</td>
+ 
+        </tr>
+
+    <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<h2>B.com</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Designation</th>
+      <th>Company</th>
+      <th>Location</th>
+      <th>Qualification</th>
+      <th>Salary</th>
+      <th>Experience</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @roles.each do |role| %>
+
+      
+    <% name= role.qualification%>
+    <% if name == 'B.com' %>
+      <tr>
+        <td><%= role.designation %></td>
+        <td><%= role.company %></td>
+        <td><%= role.location %></td>
+        <td><%= role.qualification %></td>
+        <td><%= role.salary %></td>
+        <td><%= role.experience %></td>
+        <td><%= link_to 'Show', role %></td>
+        <td><a href="../apps/new">Apply</td>
+ 
+         </tr>
+
+    <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
+
+<h2> Any Degree</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Designation</th>
+      <th>Company</th>
+      <th>Location</th>
+      <th>Qualification</th>
+      <th>Salary</th>
+      <th>Experience</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @roles.each do |role| %>
+
+      
+    <% name= role.qualification%>
+    <% if name == 'B.Tech/B.E'or name == 'B.Tech' or name == 'Any Degree' or name == 'B.com' %>
+      <tr>
+        <td><%= role.designation %></td>
+        <td><%= role.company %></td>
+        <td><%= role.location %></td>
+        <td><%= role.qualification %></td>
+        <td><%= role.salary %></td>
+        <td><%= role.experience %></td>
+        <td><%= link_to 'Show', role %></td>
+        <td><a href="../apps/new">Apply</td>
+ 
+        </tr>
+
+    <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<h2>12Th standard</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Designation</th>
+      <th>Company</th>
+      <th>Location</th>
+      <th>Qualification</th>
+      <th>Salary</th>
+      <th>Experience</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @roles.each do |role| %>
+
+      
+    <% name= role.qualification%>
+    <% if name == '12th standard' %>
+      <tr>
+        <td><%= role.designation %></td>
+        <td><%= role.company %></td>
+        <td><%= role.location %></td>
+        <td><%= role.qualification %></td>
+        <td><%= role.salary %></td>
+        <td><%= role.experience %></td>
+        <td><%= link_to 'Show', role %></td>
+        <td><a href="../apps/new">Apply</td>
+ 
+        </tr>
+
+    <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+</div>
+
+
+</body>
+</html>
